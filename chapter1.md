@@ -85,6 +85,16 @@ var cars = new List<Car>();
 
 禁止使用底線、 連字號或任何其他非英數字元。
 
+> **例外** 單元測試的方法。
+
+```
+[TestMethod]
+public void GetName_ReturnName_WhenUserIsNotNull()
+{
+    throw new NotImplementedException();
+}
+```
+
 禁止使用匈牙利命名法。
 
 避免使用縮寫或不常用的縮略字。
