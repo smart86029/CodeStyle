@@ -4,7 +4,7 @@
 
 每一個單字的第一個字母都採用大寫字母，適用於所有公用成員 \(`public`、`protected`、`internal`\)。
 
-> 例如: StringBuilder、UserName。
+> **例如** StringBuilder、UserName。
 
 * 命名空間 \(Namespace\)
 * 類別 \(Class\)
@@ -15,13 +15,13 @@
 * 列舉 \(Enum\)，及列舉的項目 
 * 屬性 \(Property\)
 * 方法 \(Method\)
-* 常數 \(Const\)
+* 常數 \(Constant\)
 
 #### 駝峰式命名法 \(Camel Case\)
 
 第一個單字以小寫字母開始，其餘單字的首字母大寫。
 
-> 例如: stringBuilder、userName。
+> **例如** stringBuilder、userName。
 
 * 欄位 \(Field\)
 * 變數 \(Variable\)
@@ -31,13 +31,13 @@
 
 兩個字母的縮略字使用全部大寫，三個字母以上的縮略字使用帕斯卡命名法。
 
-> 例如: DB、UI、Sql、Html。
+> **例如** DB、UI、Sql、Html。
 >
-> 例外: Id \(identification 的縮寫，非縮略字\)。
+> **例外** Id \(identification 的縮寫，非縮略字\)。
 
 #### 複合詞彙和一般詞彙
 
-> **避免 **搞混一般詞彙和複合詞彙
+> **避免 **搞混一般詞彙和複合詞彙。
 
 | Do | Do Not | Do | Do Not |
 | :--- | :--- | :--- | :--- |
@@ -53,7 +53,7 @@
 
 使用有意義的名稱。
 
-> 例外: for 迴圈中用來計數的迴圈變數、匿名函式的輸入參數
+> **例外** for 迴圈中用來計數的迴圈變數、匿名函式的輸入參數。
 
 ```
 for (var i = 0; i < 5; i++)
@@ -62,11 +62,26 @@ for (var i = 0; i < 5; i++)
 Customers.Find(c => c.Name == "Anne");
 ```
 
-可讀性優先於簡潔。
+可讀性優先於簡潔性。
 
-> 例如: CanScrollHorizontally 優於 ScrollableX。
+> **例如** CanScrollHorizontally 優於 ScrollableX。
+
+使用正確的拼寫。
+
+> **例如** Writable 而非 Writeable、SignIn 而非 SignOn。
+
+使用正確的單複數。
+
+```
+var car = new Car();
+var cars = new List<Car>();
+```
 
 使用正確的大小寫。
+
+使用正確的相對詞。
+
+> **例如** OpenTime 和 CloseTime 而非 OpenTime 和 StopTime。
 
 禁止使用底線、 連字號或任何其他非英數字元。
 
@@ -74,13 +89,7 @@ Customers.Find(c => c.Name == "Anne");
 
 避免使用縮寫或不常用的縮略字。
 
-> 例如: 使用 QueryData 而非 QryData。
-
-
-
-
-
-
+> **例如** 使用 QueryData 而非 QryData。
 
 
 
