@@ -41,17 +41,13 @@
 
 | Do | Do Not | Do | Do Not |
 | :--- | :--- | :--- | :--- |
-| Callback | CallBack | Namespace | NameSpace |
-| Email | EMail | Placeholder | PlaceHolder |
-| Endpoint | EndPoint | UserName | Username |
-| Hashtable | HashTable | WhiteSpace | Whitespace |
+| Callback | CallBack | UserName | Username |
+| Email | EMail | WhiteSpace | Whitespace |
+| Endpoint | EndPoint |  |  |
+| Hashtable | HashTable |  |  |
 | Metadata | MetaData |  |  |
-
-
-
-
-
-
+| Namespace | NameSpace |  |  |
+| Placeholder | PlaceHolder |  |  |
 
 
 
