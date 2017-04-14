@@ -296,7 +296,7 @@ public enum SideDishes
 >
 > **禁止** 使用的名稱和其中有 Get 的方法名稱相符。
 
-```
+```csharp
 public MainDish MainDish { get; set; }
 public List<string> GuestNameList { get; set; }  // 應修正為 GuestNames
 public bool HasNotDessert { get; set; }  // 應修正為 HasDessert
