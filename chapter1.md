@@ -92,8 +92,7 @@ var cars = new List<Car>();
 
 ```csharp
 public DateTime OpenTime { get; set; }
-public DateTime CloseTime { get; set; }
-public DateTime StopTime { get; set; }  // 錯誤
+public DateTime StopTime { get; set; }  // 應修正為 CloseTime
 ```
 
 使用相同的詞彙表達一樣的概念。
@@ -260,13 +259,13 @@ public event EventHandler Closing;
 
 列舉。
 
-> 堅持 使用單數名詞。
+> **堅持** 使用單數名詞。
 >
-> 堅持 使用複數名詞，若為旗標列舉。
+> **堅持** 使用複數名詞，若為旗標列舉。
 >
-> 禁止 使用型別名稱做為列舉的項目的前置詞。
+> **禁止** 使用型別名稱做為列舉的項目的前置詞。
 >
-> 禁止 使用 Enum、Flag、Flags 做為後置詞。
+> **禁止** 使用 Enum、Flag、Flags 做為後置詞。
 
 ```csharp
 public enum MainDish
@@ -282,6 +281,28 @@ public enum SideDishes
     Tomato = 1,
     Bacon = 2,
     Corn = 4
+}
+```
+
+屬性。
+
+> **堅持** 使用名詞、名詞片語或形容詞。
+>
+> **堅持** 使用集合名詞或複數名詞表示集合，而非使用 List 或 Collection 做為後置詞。
+>
+> **堅持** 使用肯定型 Be 動詞或助動詞來表示布林值。
+>
+> **考慮** 使用與其型別相同的名稱。
+>
+> **禁止** 使用的名稱和其中有 Get 的方法名稱相符。
+
+```
+public MainDish MainDish { get; set; }
+public List<string> GuestNameList { get; set; }  // 應修正為 GuestNames
+public bool HasNotDessert { get; set; }  // 應修正為 HasDessert
+
+public GetMainDish()  // 應修正 MainDish 名稱或修正 GetMainDish 名稱
+{
 }
 ```
 
