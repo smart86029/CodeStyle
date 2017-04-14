@@ -1,55 +1,54 @@
-.hljs-comment,
-.hljs-quote,
-.hljs-variable {
+.book .book-body .page-wrapper .page-inner section.normal .hljs-comment,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-quote,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-variable {
   color: #008000;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-built_in,
-.hljs-name,
-.hljs-tag {
+.book .book-body .page-wrapper .page-inner section.normal .hljs-keyword,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-selector-tag,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-built_in,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-name,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-tag {
   color: #00f;
 }
 
-.hljs-string,
-.hljs-title,
-.hljs-section,
-.hljs-attribute,
-.hljs-literal,
-.hljs-template-tag,
-.hljs-template-variable,
-.hljs-type,
-.hljs-addition {
+.book .book-body .page-wrapper .page-inner section.normal .hljs-string,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-title,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-section,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-attribute,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-literal,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-template-tag,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-template-variable,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-type,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-addition {
   color: #a31515;
 }
 
-.hljs-deletion,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-meta {
+.book .book-body .page-wrapper .page-inner section.normal .hljs-deletion,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-selector-attr,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-selector-pseudo,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-meta {
   color: #2b91af;
 }
 
-.hljs-doctag {
+.book .book-body .page-wrapper .page-inner section.normal .hljs-doctag {
   color: #808080;
 }
 
-.hljs-attr {
+.book .book-body .page-wrapper .page-inner section.normal .hljs-attr {
   color: #f00;
 }
 
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link {
+.book .book-body .page-wrapper .page-inner section.normal .hljs-symbol,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-bullet,
+.book .book-body .page-wrapper .page-inner section.normal .hljs-link {
   color: #00b0e8;
 }
 
-
-.hljs-emphasis {
+.book .book-body .page-wrapper .page-inner section.normal .hljs-emphasis {
   font-style: italic;
 }
 
-.hljs-strong {
+.book .book-body .page-wrapper .page-inner section.normal .hljs-strong {
   font-weight: bold;
 }
