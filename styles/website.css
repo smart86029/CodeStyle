@@ -1,14 +1,22 @@
-.book .book-body .page-wrapper .page-inner section.normal .hljs-comment,
-.book .book-body .page-wrapper .page-inner section.normal .hljs-quote,
-.book .book-body .page-wrapper .page-inner section.normal .hljs-variable {
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-comment,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-quote,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-variable,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-comment,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-quote,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-variable {
   color: #008000;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal .hljs-keyword,
-.book .book-body .page-wrapper .page-inner section.normal .hljs-selector-tag,
-.book .book-body .page-wrapper .page-inner section.normal .hljs-built_in,
-.book .book-body .page-wrapper .page-inner section.normal .hljs-name,
-.book .book-body .page-wrapper .page-inner section.normal .hljs-tag {
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-keyword,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-selector-tag,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-built_in,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-name,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-tag,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-keyword,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-selector-tag,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-built_in,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-name,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-tag {
   color: #00f;
 }
 
