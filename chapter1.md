@@ -258,5 +258,32 @@ public delegate bool WorkCompletedCallback(int count);
 public event EventHandler Closing;
 ```
 
+列舉。
+
+> 堅持 使用單數名詞。
+>
+> 堅持 使用複數名詞，若為旗標列舉。
+>
+> 禁止 使用型別名稱做為列舉的項目的前置詞。
+>
+> 禁止 使用 Enum、Flag、Flags 做為後置詞。
+
+```csharp
+public enum MainDish
+{
+    Beef = 0,
+    Pork = 5,
+}
+
+[Flags]
+public enum SideDishes
+{
+    Potato = 0,
+    Tomato = 1,
+    Bacon = 2,
+    Corn = 4
+}
+```
+
 
 
