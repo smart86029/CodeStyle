@@ -235,7 +235,7 @@ public class SoundPermission : IPermission
 
 委派。
 
-> **堅持** 使用 EventHandler 做為後置詞，若為事件中所使用的委派。
+> **堅持** 使用 EventHandler 做為後置詞，若為事件中所使用的委派，並使用 sender、e 為事件處理常式參數名稱。
 >
 > **堅持** 使用 Callback 做為後置詞，若不是事件處理常式。
 >
@@ -244,6 +244,18 @@ public class SoundPermission : IPermission
 ```csharp
 public delegate void MouseEventHandler(object sender, MouseEventArgs e);
 public delegate bool WorkCompletedCallback(int count);
+```
+
+事件。
+
+> **堅持** 使用動詞或動詞片語。
+>
+> **堅持** 使用動詞時態來表示引發事件時的時間，現在式為之前的概念，過去式為之後的概念。
+>
+> **禁止** 使用 Before 或 After 做為前置詞。
+
+```csharp
+public event EventHandler Closing;
 ```
 
 
