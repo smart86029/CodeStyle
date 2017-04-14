@@ -111,7 +111,7 @@ public Magazine RetrieveMagazine(int id)  // 應修正為 GetMagazine
 
 ```csharp
 [TestMethod]
-public void GetName_ReturnName_WhenUserIsNotNull()  // 例外，單元測式的方法
+public void GetName_ReturnName_WhenUserIsNotNull()  // 例外，單元測試的方法
 {
 }
 ```
@@ -128,7 +128,7 @@ public void QryData()  // 應修正為 QueryData
 
 #### 識別項命名慣例
 
-##### 類別、結構。
+##### 類別、結構
 
 > **堅持** 使用名詞或名詞片語。
 >
@@ -160,7 +160,7 @@ public interface IService
 }
 ```
 
-##### 泛型型別參數 \(Generic type parameter\)。
+##### 泛型型別參數 \(Generic type parameter\)
 
 > **堅持** 使用 T 做為前置詞。
 
@@ -174,7 +174,7 @@ public TEntity ToEntity<TEntity>(string json)
 public delegate bool Predicate<T>(T item);
 ```
 
-##### 衍生型別、實作型別。
+##### 衍生型別、實作型別
 
 > **堅持** 使用 Attribute 做為後置詞，若基底型別為 `System.Attribute`。
 
@@ -232,7 +232,7 @@ public class SoundPermission : IPermission
 }
 ```
 
-##### 委派。
+##### 委派
 
 > **堅持** 使用 EventHandler 做為後置詞，若為事件中所使用的委派，並使用 sender、e 為事件處理常式參數名稱。
 >
@@ -245,7 +245,7 @@ public delegate void MouseEventHandler(object sender, MouseEventArgs e);
 public delegate bool WorkCompletedCallback(int count);
 ```
 
-##### 事件。
+##### 事件
 
 > **堅持** 使用動詞或動詞片語。
 >
@@ -257,7 +257,7 @@ public delegate bool WorkCompletedCallback(int count);
 public event EventHandler Closing;
 ```
 
-##### 列舉。
+##### 列舉
 
 > **堅持** 使用單數名詞。
 >
@@ -284,7 +284,7 @@ public enum SideDishes
 }
 ```
 
-##### 屬性。
+##### 屬性
 
 > **堅持** 使用名詞、名詞片語或形容詞。
 >
@@ -303,6 +303,29 @@ public bool HasNotDessert { get; set; }  // 應修正為 HasDessert
 
 public GetMainDish()  // 應修正 MainDish 名稱或修正 GetMainDish 名稱
 {
+}
+```
+
+##### 方法
+
+> **堅持** 使用動詞或動詞片語。
+
+```csharp
+public void SaveChanges()
+{
+}
+```
+
+##### 欄位
+
+> **堅持** 使用名詞、名詞片語或形容詞。
+>
+> **禁止** 使用前置詞。
+
+```csharp
+public class Address
+{
+    private string _postCode;  // 應修正為 postCode
 }
 ```
 
