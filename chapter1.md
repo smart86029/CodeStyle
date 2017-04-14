@@ -4,7 +4,9 @@
 
 每一個單字的第一個字母都採用大寫字母，適用於所有公用成員 \(`public`、`protected`、`internal`\)。
 
-> **例如** StringBuilder、UserName。
+```csharp
+public string UserName { get; set; }
+```
 
 * 命名空間 \(Namespace\)
 * 類別 \(Class\)
@@ -21,7 +23,9 @@
 
 第一個單字以小寫字母開始，其餘單字的首字母大寫。
 
-> **例如** stringBuilder、userName。
+```csharp
+var userName = "Admin";
+```
 
 * 欄位 \(Field\)
 * 變數 \(Variable\)
@@ -31,9 +35,16 @@
 
 兩個字母的縮略字使用全部大寫，三個字母以上的縮略字使用帕斯卡命名法。
 
-> **例如** DB、UI、Sql、Html。
->
-> **例外** Id \(identification 的縮寫，非縮略字\)。
+```csharp
+public class DBUtility
+{
+    public int ContextId { get; set; }  // 例外，identification 的縮寫，非縮略字
+
+    public void ExecuteSql(string sql)
+    {
+    }
+}
+```
 
 #### 複合詞彙和一般詞彙
 
@@ -47,28 +58,26 @@
 | Hashtable | HashTable |  |  |
 | Metadata | MetaData |  |  |
 | Namespace | NameSpace |  |  |
-| Placeholder | PlaceHolder |  |   |
+| Placeholder | PlaceHolder |  |  |
 
 #### 一般命名慣例
 
 使用有意義的名稱。
 
-> **例外** for 迴圈中用來計數的迴圈變數、匿名函式的輸入參數。
-
 ```csharp
-for (var i = 0; i < 5; i++)
+for (var i = 0; i < 5; i++)  // 例外，迴圈變數 i
     result += i;
 
-Customers.Find(c => c.Name == "Anne");
+Customers.Find(c => c.Name == "Anne");  // 例外，匿名函式的輸入參數 c
 ```
 
 可讀性優先於簡潔性。
 
-> **例如** CanScrollHorizontally 優於 ScrollableX。
+例如，CanScrollHorizontally 優於 ScrollableX。
 
 使用正確的拼寫以及慣用詞彙。參考 [CA1726](https://msdn.microsoft.com/zh-tw/library/ms182258.aspx)。
 
-> **例如** Writable 而非 Writeable、SignIn 而非 SignOn。
+例如，Writable 而非 Writeable、SignIn 而非 SignOn。
 
 使用正確的單複數。
 
@@ -81,7 +90,11 @@ var cars = new List<Car>();
 
 使用正確的相對詞。
 
-> **例如** OpenTime 和 CloseTime 而非 OpenTime 和 StopTime。
+```csharp
+public DateTime OpenTime { get; set; }
+public DateTime CloseTime { get; set; }
+public DateTime StopTime { get; set; }  // 錯誤
+```
 
 使用相同的詞彙表達一樣的概念。
 
@@ -97,11 +110,9 @@ public Magazine RetrieveMagazine(int id)  // 應修正為 GetMagazine
 
 禁止使用底線、 連字號或任何其他非英數字元。
 
-> **例外** 單元測試的方法。
-
 ```csharp
 [TestMethod]
-public void GetName_ReturnName_WhenUserIsNotNull()
+public void GetName_ReturnName_WhenUserIsNotNull()  // 例外，單元測式的方法
 {
 }
 ```
@@ -110,14 +121,18 @@ public void GetName_ReturnName_WhenUserIsNotNull()
 
 避免使用縮寫或不常用的縮略字。
 
-> **例如** 使用 QueryData 而非 QryData。
+```csharp
+public void QryData()  // 應修正為 QueryData
+{
+}
+```
 
 #### 識別項命名慣例
 
 類別、結構。
 
 > **堅持** 使用名詞或名詞片語。
-
+>
 > **考慮** 使用基底類別的名稱做為後置詞。
 
 ```csharp
@@ -137,7 +152,7 @@ public class CUser  // 應修正為 User
 介面。
 
 > **堅持** 使用形容詞片語、名詞或名詞片語。
-
+>
 > **堅持** 使用 "I" 做為前置詞。
 
 ```csharp
@@ -146,7 +161,7 @@ public interface IService
 }
 ```
 
-泛型型別參數。
+泛型型別參數 \(Generic type parameter\)。
 
 > **堅持** 使用 T 做為前置詞。
 
