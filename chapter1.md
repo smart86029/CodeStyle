@@ -55,7 +55,7 @@
 
 > **例外** for 迴圈中用來計數的迴圈變數、匿名函式的輸入參數。
 
-```
+```c
 for (var i = 0; i < 5; i++)
     result += i;
 
@@ -72,7 +72,7 @@ Customers.Find(c => c.Name == "Anne");
 
 使用正確的單複數。
 
-```
+```csharp
 var car = new Car();
 var cars = new List<Car>();
 ```
@@ -87,7 +87,7 @@ var cars = new List<Car>();
 
 > **例外** 單元測試的方法。
 
-```
+```cs
 [TestMethod]
 public void GetName_ReturnName_WhenUserIsNotNull()
 {
