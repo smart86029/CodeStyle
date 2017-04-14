@@ -166,7 +166,7 @@ public interface IService
 > **堅持** 使用 T 做為前置詞。
 
 ```csharp
-public class AppController<TService> where TService : IService
+public class AppController<TService>
 {
     private TService service;
 }
@@ -207,15 +207,15 @@ public class BusinessException : Exception
 > **堅持** 使用 Dictionary 做為後置詞，若基底型別為 `IDictionary` 或 `IDictionary<TKey, TValue>`。
 
 ```csharp
-public class UserDictionary : IDictionary<int, User>
+public class UserDictionary : IDictionary
 {
 }
 ```
 
-> **堅持** 使用 Collection 做為後置詞，若基底型別為 IEnumerable、ICollection、IList、IEnumerable&lt;T&gt;、ICollection&lt;T&gt;、IList&lt;T&gt;。
+> **堅持** 使用 Collection 做為後置詞，若基底型別為 IEnumerable、ICollection、IList、IEnumerable&lt;T&gt;、ICollection&lt;T&gt;、IList&lt;T&gt;。
 
 ```csharp
-public class UserCollection : ICollection<User>
+public class UserCollection : ICollection
 {
 }
 ```
