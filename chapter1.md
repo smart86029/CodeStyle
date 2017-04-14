@@ -47,7 +47,7 @@
 | Hashtable | HashTable |  |  |
 | Metadata | MetaData |  |  |
 | Namespace | NameSpace |  |  |
-| Placeholder | PlaceHolder |  |  |
+| Placeholder | PlaceHolder |  |   |
 
 #### 一般命名慣例
 
@@ -66,7 +66,7 @@ Customers.Find(c => c.Name == "Anne");
 
 > **例如** CanScrollHorizontally 優於 ScrollableX。
 
-使用正確的拼寫。
+使用正確的拼寫以及慣用詞彙。參考 [CA1726](https://msdn.microsoft.com/zh-tw/library/ms182258.aspx)。
 
 > **例如** Writable 而非 Writeable、SignIn 而非 SignOn。
 
@@ -83,6 +83,18 @@ var cars = new List<Car>();
 
 > **例如** OpenTime 和 CloseTime 而非 OpenTime 和 StopTime。
 
+使用相同的詞彙表達一樣的概念。
+
+```csharp
+public Book GetBook(int id)
+{
+}
+
+public Magazine RetrieveMagazine(int id)  // 應修正為 GetMagazine
+{
+}
+```
+
 禁止使用底線、 連字號或任何其他非英數字元。
 
 > **例外** 單元測試的方法。
@@ -91,7 +103,6 @@ var cars = new List<Car>();
 [TestMethod]
 public void GetName_ReturnName_WhenUserIsNotNull()
 {
-    throw new NotImplementedException();
 }
 ```
 
@@ -100,6 +111,56 @@ public void GetName_ReturnName_WhenUserIsNotNull()
 避免使用縮寫或不常用的縮略字。
 
 > **例如** 使用 QueryData 而非 QryData。
+
+#### 識別項命名慣例
+
+類別、結構。
+
+> **堅持** 使用名詞或名詞片語。
+
+> **考慮** 使用基底類別的名稱做為後置詞。
+
+```csharp
+public class UserService : Service
+{
+}
+```
+
+> **禁止** 使用前置詞。
+
+```csharp
+public class CUser  // 應修正為 User
+{
+}
+```
+
+介面。
+
+> **堅持** 使用形容詞片語、名詞或名詞片語。
+
+> **堅持** 使用 "I" 做為前置詞。
+
+```csharp
+public interface IService
+{
+}
+```
+
+泛型型別參數。
+
+> **堅持** 使用 T 做為前置詞。
+
+```csharp
+public interface ISessionChannel<TSession> where TSession : ISession{
+    TSession Session { get; }
+}
+```
+
+> **考慮** 使用 T 做為型別參數名稱，若單一字母已經能表達且增加描述性名詞不會增加價值。
+
+```csharp
+public delegate bool Predicate<T>(T item);
+```
 
 
 
