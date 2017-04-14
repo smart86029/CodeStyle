@@ -166,8 +166,9 @@ public interface IService
 > **堅持** 使用 T 做為前置詞。
 
 ```csharp
-public interface ISessionChannel<TSession> where TSession : ISession{
-    TSession Session { get; }
+public class AppController<TService> where TService : IService
+{
+    private TService service;
 }
 ```
 
@@ -175,6 +176,77 @@ public interface ISessionChannel<TSession> where TSession : ISession{
 
 ```csharp
 public delegate bool Predicate<T>(T item);
+```
+
+衍生型別、實作型別。
+
+> **堅持** 使用 Attribute 做為後置詞，若基底型別為 `System.Attribute`。
+
+```csharp
+public class AuthorizedAttribute : Attribute
+{
+}
+```
+
+> **堅持** 使用 EventArgs 做為後置詞，若基底型別為 `System.EventArgs`。
+
+```csharp
+public class MouseEventArgs : EventArgs
+{
+}
+```
+
+> **堅持** 使用 Exception 做為後置詞，若基底型別為 `System.Exception`。
+
+```csharp
+public class BusinessException : Exception
+{
+}
+```
+
+> **堅持** 使用 Dictionary 做為後置詞，若基底型別為 `IDictionary` 或 `IDictionary<TKey, TValue>`。
+
+```csharp
+public class UserDictionary : IDictionary<int, User>
+{
+}
+```
+
+> **堅持** 使用 Collection 做為後置詞，若基底型別為 IEnumerable、ICollection、IList、IEnumerable&lt;T&gt;、ICollection&lt;T&gt;、IList&lt;T&gt;。
+
+```csharp
+public class UserCollection : ICollection<User>
+{
+}
+```
+
+> **堅持** 使用 Stream 做為後置詞，若基底型別為 `System.IO.Stream`。
+
+```csharp
+public class FileStream : Stream
+{
+}
+```
+
+> **堅持** 使用 Permission 做為後置詞，若基底型別為 `CodeAccessPermission` 或 `IPermission`。
+
+```csharp
+public class SoundPermission : IPermission
+{
+}
+```
+
+委派。
+
+> **堅持** 使用 EventHandler 做為後置詞，若為事件中所使用的委派。
+>
+> **堅持** 使用 Callback 做為後置詞，若不是事件處理常式。
+>
+> **禁止** 使用 Delegate 做為後置詞。
+
+```csharp
+public delegate void MouseEventHandler(object sender, MouseEventArgs e);
+public delegate bool WorkCompletedCallback(int count);
 ```
 
 
