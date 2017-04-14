@@ -166,10 +166,7 @@ public interface IService
 > **堅持** 使用 T 做為前置詞。
 
 ```csharp
-public class AppController<TService>
-{
-    private TService service;
-}
+public TEntity ToEntity<TEntity>(string json)
 ```
 
 > **考慮** 使用 T 做為型別參數名稱，若單一字母已經能表達且增加描述性名詞不會增加價值。
@@ -212,7 +209,7 @@ public class UserDictionary : IDictionary
 }
 ```
 
-> **堅持** 使用 Collection 做為後置詞，若基底型別為 IEnumerable、ICollection、IList、IEnumerable&lt;T&gt;、ICollection&lt;T&gt;、IList&lt;T&gt;。
+> **堅持** 使用 Collection 做為後置詞，若基底型別為 `IEnumerable`、`ICollection`、`IList`、`IEnumerable<T>`、`ICollection<T>`、`IList<T>`。
 
 ```csharp
 public class UserCollection : ICollection
