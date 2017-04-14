@@ -66,24 +66,35 @@ public class DBUtility
 
 ```csharp
 for (var i = 0; i < 5; i++)  // 例外，迴圈變數 i
+{
     result += i;
+}
 
 Customers.Find(c => c.Name == "Anne");  // 例外，匿名函式的輸入參數 c
 ```
 
 可讀性優先於簡潔性。
 
-例如，CanScrollHorizontally 優於 ScrollableX。
+```csharp
+public bool CanScrollHorizontally { get; set; }  // 較優
+public bool ScrollableX { get; set; }
+```
 
 使用正確的拼寫以及慣用詞彙。參考 [CA1726](https://msdn.microsoft.com/zh-tw/library/ms182258.aspx)。
 
-例如，Writable 而非 Writeable、SignIn 而非 SignOn。
+```csharp
+public bool IsWriteable { get; set; }  // 應修正為 IsWritable
+
+public void SignOn(string account, string password)  // 應修正為 SignIn
+{
+}
+```
 
 使用正確的單複數。
 
 ```csharp
 var car = new Car();
-var cars = new List<Car>();
+var carList = new List<Car>();  // 應修正為 cars
 ```
 
 使用正確的大小寫。
@@ -148,7 +159,7 @@ public class CUser  // 應修正為 User
 }
 ```
 
-##### 介面。
+##### 介面
 
 > **堅持** 使用形容詞片語、名詞或名詞片語。
 >
@@ -288,8 +299,6 @@ public enum SideDishes
 
 > **堅持** 使用名詞、名詞片語或形容詞。
 >
-> **堅持** 使用集合名詞或複數名詞表示集合，而非使用 List 或 Collection 做為後置詞。
->
 > **堅持** 使用肯定型 Be 動詞或助動詞來表示布林值。
 >
 > **考慮** 使用與其型別相同的名稱。
@@ -298,7 +307,6 @@ public enum SideDishes
 
 ```csharp
 public MainDish MainDish { get; set; }
-public List<string> GuestNameList { get; set; }  // 應修正為 GuestNames
 public bool HasNotDessert { get; set; }  // 應修正為 HasDessert
 
 public GetMainDish()  // 應修正 MainDish 名稱或修正 GetMainDish 名稱
@@ -328,6 +336,26 @@ public class Address
     private string _postCode;  // 應修正為 postCode
 }
 ```
+
+##### 參數
+
+> **堅持** 使用描述性的名詞、名詞片語或形容詞。
+>
+> **考慮** 根據參數的意義，而不是參數的型別。
+
+```csharp
+public List<Person> GetChildren(Person parent)
+{
+}
+```
+
+###### 
+
+###### 參考
+
+* [命名方針](https://msdn.microsoft.com/zh-TW/library/ms229002%28v=vs.110%29.aspx)
+* [命名警告](https://msdn.microsoft.com/zh-tw/library/ms182232.aspx)
+* [StyleCop](http://stylecop.soyuz5.com/Naming%20Rules.html)
 
 
 
