@@ -31,6 +31,10 @@ var userName = "Admin";
 * 變數 \(Variable\)
 * 參數 \(Parameter\)
 
+#### 匈牙利命名法 \(Hungarian Notation\)
+
+不使用。
+
 #### 縮略字 \(Acronym\)
 
 兩個字母的縮略字使用全部大寫，三個字母以上的縮略字使用帕斯卡命名法。
@@ -62,7 +66,7 @@ public class DBUtility
 
 #### 一般命名慣例
 
-使用有意義的名稱。
+> **堅持** 使用有意義的名稱。
 
 ```csharp
 for (var i = 0; i < 5; i++)  // 例外，迴圈變數 i
@@ -71,14 +75,14 @@ for (var i = 0; i < 5; i++)  // 例外，迴圈變數 i
 Customers.Find(c => c.Name == "Anne");  // 例外，匿名函式的輸入參數 c
 ```
 
-可讀性優先於簡潔性。
+> **堅持** 可讀性優先於簡潔性。
 
 ```csharp
 public bool CanScrollHorizontally { get; set; }  // 較優
 public bool ScrollableX { get; set; }
 ```
 
-使用正確的拼寫以及慣用詞彙。參考 [CA1726](https://msdn.microsoft.com/zh-tw/library/ms182258.aspx)。
+> **堅持** 使用正確的拼寫以及慣用詞彙。參考 [CA1726](https://msdn.microsoft.com/zh-tw/library/ms182258.aspx)。
 
 ```csharp
 public bool IsWriteable { get; set; }  // 應修正為 IsWritable
@@ -88,23 +92,21 @@ public void SignOn(string account, string password)  // 應修正為 SignIn
 }
 ```
 
-使用正確的單複數。
+> **堅持 **使用正確的單複數。
 
 ```csharp
 var car = new Car();
 var carList = new List<Car>();  // 應修正為 cars
 ```
 
-使用正確的大小寫。
-
-使用正確的相對詞。
+> **堅持 **使用正確的相對詞。
 
 ```csharp
 public DateTime OpenTime { get; set; }
 public DateTime StopTime { get; set; }  // 應修正為 CloseTime
 ```
 
-使用相同的詞彙表達一樣的概念。
+> **堅持 **使用相同的詞彙表達一樣的概念。
 
 ```csharp
 public Book GetBook(int id)
@@ -116,21 +118,19 @@ public Magazine RetrieveMagazine(int id)  // 應修正為 GetMagazine
 }
 ```
 
-禁止使用底線、 連字號或任何其他非英數字元。
+> **避免** 使用縮寫或不常用的縮略字。
 
 ```csharp
-[TestMethod]
-public void GetName_ReturnName_WhenUserIsNotNull()  // 例外，單元測試的方法
+public void QryData()  // 應修正為 QueryData
 {
 }
 ```
 
-禁止使用匈牙利命名法。
-
-避免使用縮寫或不常用的縮略字。
+> **禁止** 使用底線、 連字號或任何其他非英數字元。
 
 ```csharp
-public void QryData()  // 應修正為 QueryData
+[TestMethod]
+public void GetName_ReturnName_WhenUserIsNotNull()  // 例外，單元測試的方法
 {
 }
 ```
