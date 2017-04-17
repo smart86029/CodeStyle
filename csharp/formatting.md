@@ -13,6 +13,8 @@ public class Role
 }
 ```
 
+堅持
+
 > **禁止** 陳述式或含大括號的成員共用同一行。
 
 ```csharp
@@ -26,15 +28,27 @@ public User GetUser(int id)
 }
 ```
 
+> **禁止** 相連語句之間的空行，包含 `if-else`、`try-catch`、`do-while` 等。
+
+```
+if (hasPermission)
+{
+}
+
+else  // 錯誤
+{
+}
+```
+
 > **禁止** 不必要的空行。
 
 ```csharp
 public class Person
 {  // 錯誤，左括號後不可接空行
-    
+
     public string FirstName { get; set; }
-    
-    
+
+
     public string LastName { get; set; }  // 錯誤，空行以一行為限
 
 }  // 錯誤，右括號前不可接空行
