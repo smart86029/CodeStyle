@@ -13,7 +13,31 @@ public class Role
 }
 ```
 
-堅持
+> **堅持** 在成員之間加入空行，除了欄位之外。
+
+```csharp
+public string Account { get; set; }
+
+public string Password { get; set; }
+```
+
+> **考慮** 在不同邏輯區塊之間加入空行。
+
+```csharp
+public int GetChosonOne()
+{
+    var min = 0;
+    var max = 10000;
+    
+    // 邏輯區塊一
+    ...
+    
+    // 邏輯區塊二
+    ...
+    
+    return result;
+}
+```
 
 > **禁止** 陳述式或含大括號的成員共用同一行。
 
@@ -30,7 +54,7 @@ public User GetUser(int id)
 
 > **禁止** 相連語句之間的空行，包含 `if-else`、`try-catch`、`do-while` 等。
 
-```
+```csharp
 if (hasPermission)
 {
 }
