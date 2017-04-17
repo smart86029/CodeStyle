@@ -28,13 +28,13 @@ public int GetChosonOne()
 {
     var min = 0;
     var max = 10000;
-    
+
     // 邏輯區塊一
     ...
-    
+
     // 邏輯區塊二
     ...
-    
+
     return result;
 }
 ```
@@ -77,6 +77,12 @@ public class Person
 
 }  // 錯誤，右括號前不可接空行
 ```
+
+#### 空格 \(Spacing\)
+
+
+
+
 
 
 

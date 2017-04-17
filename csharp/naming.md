@@ -175,6 +175,8 @@ public interface IService
 
 ```csharp
 public TEntity ToEntity<TEntity>(string json)
+{
+}
 ```
 
 > **考慮** 使用 T 做為型別參數名稱，若單一字母已經能表達且增加描述性名詞不會增加價值。
