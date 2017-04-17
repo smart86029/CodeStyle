@@ -1,4 +1,4 @@
-# C\#命名方針
+# 命名方針
 
 #### 帕斯卡命名法 \(Pascal Case\)
 
@@ -66,9 +66,7 @@ public class DBUtility
 
 ```csharp
 for (var i = 0; i < 5; i++)  // 例外，迴圈變數 i
-{
     result += i;
-}
 
 Customers.Find(c => c.Name == "Anne");  // 例外，匿名函式的輸入參數 c
 ```
@@ -355,7 +353,7 @@ public List<Person> GetChildren(Person parent)
 
 * [命名方針](https://msdn.microsoft.com/zh-TW/library/ms229002%28v=vs.110%29.aspx)
 * [命名警告](https://msdn.microsoft.com/zh-tw/library/ms182232.aspx)
-* [StyleCop](http://stylecop.soyuz5.com/Naming%20Rules.html)
+* [StyleCop](http://stylecop.soyuz5.com/Naming Rules.html)
 
 
 
