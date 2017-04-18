@@ -143,6 +143,13 @@ public void Calculate<T>()
 }
 ```
 
+> **禁止** 多個空格，縮排除外。
+
+```csharp
+private int length = 4;
+private int width  = 3;  // 錯誤
+```
+
 #### 排序 \(Ordering\)
 
 > **堅持** 以下列順序組織成員。
@@ -221,6 +228,26 @@ public event EventHandler Closing
     remove { this.closing -= value }
 }
 ```
+
+#### 可讀性 \(Readability\)
+
+> **堅持** 一行一陳述式，過長的陳述式，在 `.` 之前、`,` 之後或運算子之後換行。
+
+```csharp
+public List<string> GetNames(int age, int height, int weight,
+    int chest, int waist, int hips)
+{
+    var result = People
+        .Where(p => p.Age < age)
+        .Select(p => p.Name);
+    
+    return result;
+}
+```
+
+> **避免** 使用 `#region`。
+
+在大多數情況之下，將過長的方法擷取成較小的方法，將過長的程式碼拆分到新檔案，並不需要使用 `#region`，使用 `#region` 會使程式碼多一層無意義的層級，大綱展開與摺疊需要額外的動作。
 
 
 
