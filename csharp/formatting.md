@@ -115,7 +115,7 @@ if (user == null)
     throw new ArgumentNullException(nameof(user));
 ```
 
-> **堅持** 在正確位置加入空格，以下在之後加一空格 \(句末除外\)，包含 `,`、`;`、`{`、`//`、`///` 等；在運算子前後各加一空格；以下不加空格，包含 ++、--、\[、\]、\(、\)、&lt;、&gt; 等。
+> **堅持** 在正確位置加入空格，以下在之後加一空格 \(句末除外\)，包含 `,`、`;`、`{`、`//`、`///` 等；在運算子前後各加一空格；以下不加空格，包含 `++`、`--`、`[`、`]`、`(`、`)`、`<`、`>` 等。
 
 ```csharp
 /// <summary>
@@ -134,6 +134,31 @@ public void Calculate<T>()
 ```
 
 #### 排序 \(Ordering\)
+
+> **堅持** 以下列順序組織成員。
+
+* 欄位 \(Fields  \)
+* 建構子 \(Constructors  \)
+* 解構子 \(Destructors\)
+* 委派 \(Delegates  \)
+* 事件 \(Events  \)
+* 列舉 \(Enums  \)
+* 介面 \(Interfaces\)
+* 屬性 \(Properties  \)
+* 索引子 \(Indexers  \)
+* 方法 \(Methods  \)
+* 結構 \(Structs  \)
+* 類別 \(Classes\)
+
+> **堅持** 以下列順序組織存取修飾詞。
+
+* `public  `
+* `internal  `
+* `protected internal  `
+* `protected  `
+* `private`
+
+
 
 
 
