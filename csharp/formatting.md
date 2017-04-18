@@ -21,6 +21,16 @@ public string Account { get; set; }
 public string Password { get; set; }
 ```
 
+> **堅持** 在 using 指示詞和命名空間宣告之間加入空行。
+
+```csharp
+using System;
+
+namespace WebApplication.Model
+{
+}
+```
+
 > **考慮** 在不同邏輯區塊之間加入空行。
 
 ```csharp
@@ -157,6 +167,20 @@ public void Calculate<T>()
 * `protected internal`
 * `protected`
 * `private`
+
+> **堅持** `using` 指示詞優先放置 `System` 命名空間，並以命名空間字母正向排序。
+>
+> **堅持** `using` 靜態指示詞放置在 `using` 指示詞之後，並以命名空間字母正向排序。
+>
+> **堅持** `using` 別名指示詞放置在 `using` 靜態指示詞之後，並以別名字母正向排序。
+
+```csharp
+using System;
+using System.Linq;
+using Autofac;
+using static System.Console;
+using Excel = Microsoft.Office.Interop.Excel;
+```
 
 
 
