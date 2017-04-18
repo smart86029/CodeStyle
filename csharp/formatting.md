@@ -137,28 +137,26 @@ public void Calculate<T>()
 
 > **堅持** 以下列順序組織成員。
 
-* 欄位 \(Fields  \)
-* 建構子 \(Constructors  \)
+* 欄位 \(Fields\)
+* 建構子 \(Constructors\)
 * 解構子 \(Destructors\)
-* 委派 \(Delegates  \)
-* 事件 \(Events  \)
-* 列舉 \(Enums  \)
+* 委派 \(Delegates\)
+* 事件 \(Events\)
+* 列舉 \(Enums\)
 * 介面 \(Interfaces\)
-* 屬性 \(Properties  \)
-* 索引子 \(Indexers  \)
-* 方法 \(Methods  \)
-* 結構 \(Structs  \)
+* 屬性 \(Properties\)
+* 索引子 \(Indexers\)
+* 方法 \(Methods\)
+* 結構 \(Structs\)
 * 類別 \(Classes\)
 
 > **堅持** 以下列順序組織存取修飾詞。
 
-* `public  `
-* `internal  `
-* `protected internal  `
-* `protected  `
+* `public`
+* `internal`
+* `protected internal`
+* `protected`
 * `private`
-
-
 
 
 
