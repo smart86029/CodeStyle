@@ -240,14 +240,19 @@ public List<string> GetNames(int age, int height, int weight,
     var result = People
         .Where(p => p.Age < age)
         .Select(p => p.Name);
-    
+
     return result;
 }
+```
+
+> **考慮** 使用 var 宣告區域變數。
+
+```csharp
+var count = 0;
+var sql = new StringBuilder();
 ```
 
 > **避免** 使用 `#region`。
 
 在大多數情況之下，將過長的方法擷取成較小的方法，將過長的程式碼拆分到新檔案，並不需要使用 `#region`，使用 `#region` 會使程式碼多一層無意義的層級，大綱展開與摺疊需要額外的動作。
-
-
 
