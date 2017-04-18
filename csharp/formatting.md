@@ -168,6 +168,12 @@ public void Calculate<T>()
 * `protected`
 * `private`
 
+> **堅持** 以存取修飾詞、static 修飾詞、其他關鍵字的順序宣告成員，並以此順序進行排序。
+
+```csharp
+private static readonly int index = 0;
+```
+
 > **堅持** `using` 指示詞優先放置 `System` 命名空間，並以命名空間字母正向排序。
 >
 > **堅持** `using` 靜態指示詞放置在 `using` 指示詞之後，並以命名空間字母正向排序。
@@ -180,6 +186,40 @@ using System.Linq;
 using Autofac;
 using static System.Console;
 using Excel = Microsoft.Office.Interop.Excel;
+```
+
+> **堅持** 靜態成員放置在非靜態成員之前。
+
+```csharp
+public static int Version { get; set; }
+
+public string Name { get; set; }
+```
+
+> **堅持** 常數欄位放置在一般欄位之前。
+>
+> **堅持** 唯讀欄位放置在一般欄位之前。
+
+```csharp
+private const int Size = 10;
+private readonly int startAt = 0;
+private int count;
+```
+
+> **堅持** 屬性 `get` 存取子放在 `set` 存取子之前。
+
+```csharp
+public int Age { get; set; }
+```
+
+> **堅持** 事件 `add` 存取子放在 `remove` 存取子之前。
+
+```csharp
+public event EventHandler Closing
+{
+    add { this.closing += value }
+    remove { this.closing -= value }
+}
 ```
 
 
