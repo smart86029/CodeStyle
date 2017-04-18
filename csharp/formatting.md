@@ -26,6 +26,7 @@ public string Password { get; set; }
 ```csharp
 public int GetChosonOne()
 {
+    // 宣告區塊
     var min = 0;
     var max = 10000;
 
@@ -36,6 +37,20 @@ public int GetChosonOne()
     ...
 
     return result;
+}
+```
+
+> **考慮** 單行陳述式加入大括號。
+
+```csharp
+if (age > 19)
+{
+    if (isStudent)
+        Notify("兵役緩徵");
+}
+else
+{
+    Notify("兵役體檢");  // 若省略大括號，else 會跟著最近的 if
 }
 ```
 
@@ -80,9 +95,12 @@ public class Person
 
 #### 空格 \(Spacing\)
 
+> **堅持** 關鍵字應在正確位置加入空格，以下關鍵字通常在之後加一空格，包含 `catch`、`fixed`、`for`、`foreach`、`from`、`group`、`if`、`in`、`into`、`join`、`let`、`lock`、`new`、`orderby`、`return`、`select`、`stackalloc`、`switch`、`throw`、`using`、`where`、`while`、`yield` 等；以下關鍵字後不加空格，包含 `checked`、`default`、`nameof`、`sizeof`、`typeof`、`unchecked` 等。
 
-
-
+```csharp
+if (user == null)
+    throw new ArgumentNullException(nameof(user));
+```
 
 
 
