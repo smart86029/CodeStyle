@@ -126,12 +126,14 @@ public void Calculate<T>()
 {
     var result = 0;
     var numbers = new List<T> { 1, 2, 3 };
-    
+
     // 單行註解
     for (var i = 0; i < 10; i++)
         result += i;
 }
 ```
+
+#### 排序 \(Ordering\)
 
 
 
