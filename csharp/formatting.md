@@ -95,11 +95,42 @@ public class Person
 
 #### 空格 \(Spacing\)
 
-> **堅持** 關鍵字應在正確位置加入空格，以下關鍵字通常在之後加一空格，包含 `catch`、`fixed`、`for`、`foreach`、`from`、`group`、`if`、`in`、`into`、`join`、`let`、`lock`、`new`、`orderby`、`return`、`select`、`stackalloc`、`switch`、`throw`、`using`、`where`、`while`、`yield` 等；以下關鍵字後不加空格，包含 `checked`、`default`、`nameof`、`sizeof`、`typeof`、`unchecked` 等。
+> **堅持** Tab 設為 4 spaces。
 
 ```csharp
+namespace Sample.Data
+{
+    public class Repository
+    {
+    }
+}
+```
+
+> **堅持** 關鍵字應在正確位置加入空格，以下關鍵字通常在之後加一空格，包含 `catch`、`fixed`、`for`、`foreach`、`from`、`group`、`if`、`in`、`into`、`join`、`let`、`lock`、`new`、`orderby`、`return`、`select`、`stackalloc`、`switch`、`throw`、`using`、`var`、`where`、`while`、`yield` 等；以下關鍵字後不加空格，包含 `checked`、`default`、`nameof`、`sizeof`、`typeof`、`unchecked` 等。
+
+```csharp
+var fibonacciNumbers = new[] { 1, 1, 2, 3, 5, 8, 13 }  // 例外，初始化陣列
+
 if (user == null)
     throw new ArgumentNullException(nameof(user));
+```
+
+> **堅持** 在正確位置加入空格，以下在之後加一空格 \(句末除外\)，包含 `,`、`;`、`{`、`//`、`///` 等；在運算子前後各加一空格；以下不加空格，包含 ++、--、\[、\]、\(、\)、&lt;、&gt; 等。
+
+```csharp
+/// <summary>
+/// 計算
+/// </summary>
+[Conditional("DEBUG")]
+public void Calculate<T>()
+{
+    var result = 0;
+    var numbers = new List<T> { 1, 2, 3 };
+    
+    // 單行註解
+    for (var i = 0; i < 10; i++)
+        result += i;
+}
 ```
 
 
