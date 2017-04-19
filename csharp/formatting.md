@@ -261,7 +261,7 @@ public string Name { get; set; }
 > **堅持** 使用關鍵字宣告型別。
 
 ```csharp
-private Int32 count;  // 應改為 int
+private Int32 count;  // 應修正為 int
 ```
 
 | **關鍵字** | **型別** | **關鍵字** | **型別** |
@@ -280,6 +280,19 @@ private Int32 count;  // 應改為 int
 ```csharp
 private int? version;
 ```
+
+> **堅持** 使用大寫後置字元宣告數值型態，而不是轉型。
+
+```csharp
+private long viewCount = 1000L;
+private long visitorCount = (long)500;  // 錯誤
+```
+
+| **數值型態** | **後置字元** | **數值型態** | **後置字元** |
+| :--- | :--- | :--- | :--- |
+| uint | U | float | F |
+| long | L | double | D |
+| ulong | UL | decimal | M |
 
 > **考慮** 使用 var 宣告區域變數。
 
