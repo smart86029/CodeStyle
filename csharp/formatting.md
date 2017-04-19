@@ -245,6 +245,8 @@ public List<string> GetNames(int age, int height, int weight,
 }
 ```
 
+> **堅持**
+
 > **堅持** 使用關鍵字宣告型別。
 
 ```csharp
@@ -260,7 +262,7 @@ private Int32 count;  // 應改為 int
 | int | System.Int32 | char | System.Char |
 | uint | System.UInt32 | string | System.String |
 | long | System.Int64 | object | System.Object |
-| long | System.UInt64 |  |    |
+| ulong | System.UInt64 |  | 　 |
 
 > **堅持** 使用 `T?` 表達  `System.Nullable<T>`。
 
