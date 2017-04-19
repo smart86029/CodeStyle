@@ -328,7 +328,19 @@ namesapce WebApplication.Common
 }
 ```
 
+> **堅持** 除了常數之外，將欄位宣告成 `private`。
 
+```csharp
+private int page = 1;
+```
+
+> **禁止** 省略存取修飾詞。
+
+```csharp
+void Swap(int a, int b)  // 錯誤
+{
+}
+```
 
 
 
