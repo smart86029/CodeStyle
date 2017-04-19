@@ -245,6 +245,12 @@ public List<string> GetNames(int age, int height, int weight,
 }
 ```
 
+> **堅持** 使用 `T?` 表達  `System.Nullable<T>`。
+
+```csharp
+private int? version;
+```
+
 > **考慮** 使用 var 宣告區域變數。
 
 ```csharp
