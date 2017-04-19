@@ -52,7 +52,7 @@ public class DBUtility
 
 #### 複合詞彙和一般詞彙
 
-> **避免 **搞混一般詞彙和複合詞彙。
+> **避免** 搞混一般詞彙和複合詞彙。
 
 | Do | Do Not | Do | Do Not |
 | :--- | :--- | :--- | :--- |
@@ -92,21 +92,21 @@ public void SignOn(string account, string password)  // 應修正為 SignIn
 }
 ```
 
-> **堅持 **使用正確的單複數。
+> **堅持** 使用正確的單複數。
 
 ```csharp
 var car = new Car();
 var carList = new List<Car>();  // 應修正為 cars
 ```
 
-> **堅持 **使用正確的相對詞。
+> **堅持** 使用正確的相對詞。
 
 ```csharp
 public DateTime OpenTime { get; set; }
 public DateTime StopTime { get; set; }  // 應修正為 CloseTime
 ```
 
-> **堅持 **使用相同的詞彙表達一樣的概念。
+> **堅持** 使用相同的詞彙表達一樣的概念。
 
 ```csharp
 public Book GetBook(int id)
@@ -235,7 +235,7 @@ public class FileStream : Stream
 }
 ```
 
-> **堅持** 使用 Permission 做為後置詞，若基底型別為 `CodeAccessPermission` 或 `IPermission`。
+> **堅持** 使用 Permission 做為後置詞，若基底型別為 `IPermission`。
 
 ```csharp
 public class SoundPermission : IPermission

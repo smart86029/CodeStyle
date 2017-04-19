@@ -245,7 +245,18 @@ public List<string> GetNames(int age, int height, int weight,
 }
 ```
 
-> **堅持**
+> **堅持 **一行宣告一變數。
+
+```csharp
+int start = 0, end = 10;  // 錯誤
+```
+
+> **堅持** 一行使用一屬性 \(Attribute\)。
+
+```csharp
+[Display(Name = "名稱"), Required]  // 錯誤
+public string Name { get; set; }
+```
 
 > **堅持** 使用關鍵字宣告型別。
 
@@ -262,7 +273,7 @@ private Int32 count;  // 應改為 int
 | int | System.Int32 | char | System.Char |
 | uint | System.UInt32 | string | System.String |
 | long | System.Int64 | object | System.Object |
-| ulong | System.UInt64 |  | 　 |
+| ulong | System.UInt64 |  |  |
 
 > **堅持** 使用 `T?` 表達  `System.Nullable<T>`。
 
