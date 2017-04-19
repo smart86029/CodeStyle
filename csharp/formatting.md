@@ -245,6 +245,23 @@ public List<string> GetNames(int age, int height, int weight,
 }
 ```
 
+> **堅持** 使用關鍵字宣告型別。
+
+```csharp
+private Int32 count;  // 應改為 int
+```
+
+| 關鍵字 | 型別 | 關鍵字 | 型別 |
+| :--- | :--- | :--- | :--- |
+| sbyte | System.SByte | float | System.Single |
+| byte | System.Byte | double | System.Double |
+| short | System.Int16 | decimal | System.Decimal |
+| ushort | System.UInt16 | bool | System.Boolean |
+| int | System.Int32 | char | System.Char |
+| uint | System.UInt32 | string | System.String |
+| long | System.Int64 | object | System.Object |
+| long | System.UInt64 |  |  |
+
 > **堅持** 使用 `T?` 表達  `System.Nullable<T>`。
 
 ```csharp
