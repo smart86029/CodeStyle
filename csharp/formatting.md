@@ -334,6 +334,12 @@ namesapce WebApplication.Common
 private int page = 1;
 ```
 
+> **避免 **無意義的括號。
+
+```csharp
+private int sum = (3 + 4);  // 錯誤
+```
+
 > **禁止** 省略存取修飾詞。
 
 ```csharp
