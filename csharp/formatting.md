@@ -305,3 +305,30 @@ var sql = new StringBuilder();
 
 在大多數情況之下，將過長的方法擷取成較小的方法，將過長的程式碼拆分到新檔案，並不需要使用 `#region`，使用 `#region` 會使程式碼多一層無意義的層級，大綱展開與摺疊需要額外的動作。
 
+#### 可維護性 \(Maintainability\)
+
+> **堅持** 一個檔案只定義一個類別，除了與此類別相關的介面、類別、列舉等。
+>
+> **堅持** 檔案名稱和類別名稱一致。
+
+```csharp
+// DBUtility.cs
+
+namesapce WebApplication.Common
+{
+    public enum Replication
+    {
+        Master = 0,
+        Slave = 1
+    }
+
+    public class DBUtility
+    {
+    }
+}
+```
+
+
+
+
+
