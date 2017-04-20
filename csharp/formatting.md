@@ -340,6 +340,15 @@ private int page = 1;
 private int sum = (3 + 4);  // 錯誤
 ```
 
+> **避免** 判斷布林值的值。
+
+```csharp
+if (isStudent == true)  // 錯誤
+    return false;
+if (isTeacher)
+    return true;
+```
+
 > **禁止** 省略存取修飾詞。
 
 ```csharp
