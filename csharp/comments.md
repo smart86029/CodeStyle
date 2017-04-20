@@ -119,5 +119,10 @@ public string UserName { get; set; }
 
 
 
+###### 參考
+
+* [XML 文件註解](https://msdn.microsoft.com/zh-tw/library/b2s063f7.aspx)
+* [StyleCop](http://stylecop.soyuz5.com/Documentation%20Rules.html)
+
 
 
