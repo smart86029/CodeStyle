@@ -316,7 +316,7 @@ var sql = new StringBuilder();
 
 namesapce WebApplication.Common
 {
-    public enum Replication
+    public enum Replication  // 允許，但仍然建議另開 Replication.cs 單獨定義
     {
         Master = 0,
         Slave = 1
@@ -357,11 +357,9 @@ void Swap(int a, int b)  // 錯誤
 }
 ```
 
-
-
 ###### 參考
 
-* [StyleCop](http://stylecop.soyuz5.com/StyleCop%20Rules.html)
+* [StyleCop](http://stylecop.soyuz5.com/StyleCop Rules.html)
 
 
 
