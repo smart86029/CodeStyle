@@ -54,29 +54,53 @@ public class UserService
 
 ```csharp
 /// <summary>
-/// 性別
+/// 性別。
 /// </summary>
 public enum Sex
 {
     /// <summary>
-    /// 未知項
+    /// 未知項。
     /// </summary>
     NotKnown = 0,
 
     /// <summary>
-    /// 男性
+    /// 男性。
     /// </summary>
     Male = 1,
 
     /// <summary>
-    /// 女性
+    /// 女性。
     /// </summary>
     Female = 2,
 
     /// <summary>
-    /// 未規定項
+    /// 未規定項。
     /// </summary>
     NotApplicable = 9
+}
+```
+
+> **堅持** 參數必須添加文件註解。
+>
+> **堅持** 傳回值必須添加文件註解。
+>
+> **堅持** 例外狀況必須添加文件註解。
+
+```csharp
+/// <summary>
+/// 取得使用者。
+/// </summary>
+/// <param name="id">ID。</param>
+/// <returns>使用者。</returns>
+/// <exception cref="ArgumentException"><paramref name="id"/> 不合法。</exception>
+public User GetUser(int id)
+{
+    if (id <= 0)
+        throw new ArgumentException("不合法的 ID", nameof(id));
+
+    var user = new User();
+    
+    return user;
 }
 ```
 
