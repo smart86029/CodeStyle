@@ -50,6 +50,31 @@ public class UserService
 }
 ```
 
+> **堅持** 泛型型別參數必須添加文件註解。
+>
+> **堅持** 參數必須添加文件註解。
+>
+> **堅持** 傳回值必須添加文件註解。
+>
+> **堅持** 例外狀況必須添加文件註解。
+
+```csharp
+/// <summary>
+/// 取得模型。
+/// </summary>
+/// <typeparam name="T">模型類別。</typeparam>
+/// <param name="id">ID。</param>
+/// <returns>模型的執行個體。</returns>
+/// <exception cref="ArgumentException"><paramref name="id"/> 不合法。</exception>
+public T GetModel<T>(int id)
+{
+    if (id <= 0)
+        throw new ArgumentException("不合法的 ID", nameof(id));
+
+    return default(T);
+}
+```
+
 > **堅持** 列舉的項目必須添加文件註解。
 
 ```csharp
@@ -80,29 +105,14 @@ public enum Sex
 }
 ```
 
-> **堅持** 泛型型別參數必須添加文件註解。
->
-> **堅持** 參數必須添加文件註解。
->
-> **堅持** 傳回值必須添加文件註解。
->
-> **堅持** 例外狀況必須添加文件註解。
+> **堅持** 屬性的值必須添加文件註解。
 
 ```csharp
 /// <summary>
-/// 取得模型。
+/// 取得或設定使用者名稱。
 /// </summary>
-/// <typeparam name="T">模型類別。</typeparam>
-/// <param name="id">ID。</param>
-/// <returns>模型的執行個體。</returns>
-/// <exception cref="ArgumentException"><paramref name="id"/> 不合法。</exception>
-public T GetModel<T>(int id)
-{
-    if (id <= 0)
-        throw new ArgumentException("不合法的 ID", nameof(id));
-
-    return default(T);
-}
+/// <value>使用者名稱。</value>
+public string UserName { get; set; }
 ```
 
 
