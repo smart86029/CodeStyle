@@ -80,6 +80,8 @@ public enum Sex
 }
 ```
 
+> **堅持** 泛型型別參數必須添加文件註解。
+>
 > **堅持** 參數必須添加文件註解。
 >
 > **堅持** 傳回值必須添加文件註解。
@@ -88,19 +90,18 @@ public enum Sex
 
 ```csharp
 /// <summary>
-/// 取得使用者。
+/// 取得模型。
 /// </summary>
+/// <typeparam name="T">模型類別。</typeparam>
 /// <param name="id">ID。</param>
-/// <returns>使用者。</returns>
+/// <returns>模型的執行個體。</returns>
 /// <exception cref="ArgumentException"><paramref name="id"/> 不合法。</exception>
-public User GetUser(int id)
+public T GetModel<T>(int id)
 {
     if (id <= 0)
         throw new ArgumentException("不合法的 ID", nameof(id));
 
-    var user = new User();
-    
-    return user;
+    return default(T);
 }
 ```
 
