@@ -35,5 +35,50 @@
 /* 不使用此種註解方式 */
 ```
 
+#### XML 文件註解 \(XML Documentation Comments\)
+
+> **堅持** 公用成員 \(`public`、`protected`、`internal`\) 必須添加文件註解。
+>
+> **堅持 **文件註解必須包含 `<summary>`。
+
+```csharp
+/// <summary>
+/// 使用者服務。
+/// </summary>
+public class UserService
+{
+}
+```
+
+> **堅持** 列舉的項目必須添加文件註解。
+
+```csharp
+/// <summary>
+/// 性別
+/// </summary>
+public enum Sex
+{
+    /// <summary>
+    /// 未知項
+    /// </summary>
+    NotKnown = 0,
+
+    /// <summary>
+    /// 男性
+    /// </summary>
+    Male = 1,
+
+    /// <summary>
+    /// 女性
+    /// </summary>
+    Female = 2,
+
+    /// <summary>
+    /// 未規定項
+    /// </summary>
+    NotApplicable = 9
+}
+```
+
 
 
