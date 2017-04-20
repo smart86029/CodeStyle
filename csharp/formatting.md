@@ -359,3 +359,9 @@ void Swap(int a, int b)  // 錯誤
 
 
 
+###### 參考
+
+* [StyleCop](http://stylecop.soyuz5.com/StyleCop%20Rules.html)
+
+
+
