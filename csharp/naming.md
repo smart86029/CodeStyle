@@ -149,7 +149,7 @@ public class UserService : Service
 }
 ```
 
-> **避免** 使用 Base 做為基底類別的後置詞。
+> **禁止** 使用 Base 做為基底類別的後置詞。
 
 ```csharp
 public abstract class ServiceBase  // 應修正為 Service
