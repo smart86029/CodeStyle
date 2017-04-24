@@ -55,8 +55,37 @@ public abstract class Window
 ```csharp
 public class AutoDoor : Door
 {
-} 
+}
 ```
+
+#### 結構 \(Struct\)
+
+* 實值類型。
+* 具有原子性，邏輯上為單一值。
+* 具有常量性。
+* 執行個體很小。
+
+> **考慮** 使用結構，當符合以上特性且不會經常 Boxing。
+
+```csharp
+public struct Color
+{
+    public int Red { get; private set; }
+    public int Green { get; private set; }
+    public int Blue { get; private set; }
+
+    public Color(int red, int green, int blue)
+    {
+        Red = red;
+        Green = green;
+        Blue = blue;
+    }
+}
+```
+
+
+
+
 
 
 
