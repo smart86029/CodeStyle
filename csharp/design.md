@@ -83,5 +83,7 @@ public struct RgbColor
 }
 ```
 
+#### 介面 \(Interface\)
+
 
 
