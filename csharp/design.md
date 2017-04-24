@@ -21,6 +21,16 @@ public static class LogUtility
 
 不能具現化，僅做為基底類別供其他類別繼承。
 
+> **堅持** 謹慎使用抽象類別，或考慮使用介面。
+
+```csharp
+public abstract class Door
+{
+    public abstract void Open();
+    public abstract void Close();
+}
+```
+
 > **堅持** 將建構子宣告成 `protected` 或 `internal`。
 
 ```csharp
@@ -38,6 +48,14 @@ public abstract class Window
     {
     }
 }
+```
+
+> **堅持** 至少提供一個衍生類別，有助於驗證此抽項類別的設計。
+
+```csharp
+public class AutoDoor : Door
+{
+} 
 ```
 
 
