@@ -68,13 +68,13 @@ public class AutoDoor : Door
 > **考慮** 使用結構，當符合以上特性且不會經常 Boxing。
 
 ```csharp
-public struct Color
+public struct RgbColor
 {
     public int Red { get; private set; }
     public int Green { get; private set; }
     public int Blue { get; private set; }
 
-    public Color(int red, int green, int blue)
+    public RgbColor(int red, int green, int blue)
     {
         Red = red;
         Green = green;
@@ -82,10 +82,6 @@ public struct Color
     }
 }
 ```
-
-
-
-
 
 
 
