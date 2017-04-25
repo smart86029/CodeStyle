@@ -255,7 +255,7 @@ public class SoundPermission : IPermission
 
 > **堅持** 使用 EventHandler 做為後置詞，若為事件中所使用的委派，並使用 sender、e 為事件處理常式參數名稱。
 >
-> **堅持** 使用 Callback 做為後置詞，若不是事件處理常式。
+> **堅持** 使用 Callback 做為後置詞，若為回呼。
 >
 > **禁止** 使用 Delegate 做為後置詞。
 
