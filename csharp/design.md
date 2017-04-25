@@ -127,5 +127,11 @@ public interface IMarker
 }
 ```
 
+#### 委派 \(Delegate\)
+
+> **堅持** 使用 `EventHandler<TEventArgs>` 而不是自訂委派，當定義事件處理常式時。
+>
+> **堅持** 使用 `Func<>`、 `Action<>` 或 `Expression<>` 委派而不是自訂委派，當定義 API 回呼時。
+
 
 
