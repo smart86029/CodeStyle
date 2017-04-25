@@ -85,5 +85,47 @@ public struct RgbColor
 
 #### 介面 \(Interface\)
 
+可以包含事件、屬性、索引子、方法。
+
+> **堅持** 至少提供一個實作型別，有助於驗證此介面的設計。
+>
+> **堅持** 使用介面，當結構需要抽象化。
+
+```csharp
+public interface IShape
+{
+    decimal Area { get; }
+}
+
+public struct Rectangle : IShape
+{
+    public decimal Length { get; private set; }
+    public decimal Width { get; private set; }
+    public decimal Area
+    {
+        get
+        {
+            return Length * Width;
+        }
+    }
+}
+```
+
+> **考慮** 使用介面，當需要多重繼承。
+
+```csharp
+public class Bird : Animal, IFlyable
+{
+}
+```
+
+> **避免** 使用不含成員的介面。
+
+```csharp
+public interface IMarker
+{
+}
+```
+
 
 
