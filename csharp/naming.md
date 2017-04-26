@@ -296,7 +296,7 @@ public enum MainDish
 [Flags]
 public enum SideDishes
 {
-    Potato = 0,
+    None = 0,
     Tomato = 1,
     Bacon = 2,
     Corn = 4

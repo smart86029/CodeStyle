@@ -145,5 +145,30 @@ public interface IMarker
 Closing(this, EventArgs.Empty);
 ```
 
+#### 列舉 \(Enum\)
+
+> **堅持** 提供 `0` 做為預設值，若為旗標列舉，命名為 None。
+>
+> **考慮** 使用 `System.Int32` 做為列舉的基礎型別。
+
+```csharp
+public enum MainDish
+{
+    Beef = 0,
+    Pork = 5,
+}
+
+[Flags]
+public enum SideDishes
+{
+    None = 0,
+    Tomato = 1,
+    Bacon = 2,
+    Corn = 4
+}
+```
+
+> **避免** 使用只有一個選項的列舉。
+
 
 
