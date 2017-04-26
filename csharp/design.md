@@ -131,7 +131,19 @@ public interface IMarker
 
 > **堅持** 使用 `EventHandler<TEventArgs>` 而不是自訂委派，當定義事件處理常式時。
 >
-> **堅持** 使用 `Func<>`、 `Action<>` 或 `Expression<>` 委派而不是自訂委派，當定義 API 回呼時。
+> **堅持** 使用 `Func<>`、 `Action<>` 或 `Expression<>` 委派而不是自訂委派，當定義回呼時。
+
+#### 事件 \(Event\)
+
+> **堅持** 引發靜態事件時傳遞 `null` 做為 sender。
+>
+> **禁止** 引發非靜態事件時傳遞 `null` 做為 sender。
+>
+> **禁止** 引發事件時傳遞 `null` 做為事件資料參數。應傳遞 `EventArgs.Empty`。
+
+```csharp
+Closing(this, EventArgs.Empty);
+```
 
 
 
