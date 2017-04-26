@@ -170,5 +170,24 @@ public enum SideDishes
 
 > **避免** 使用只有一個選項的列舉。
 
+#### 屬性 \(Property\)
+
+> **堅持** 提供預設值，避免造成安全性漏洞。
+
+> **考慮** 使用自動實作屬性，若不需要自訂存取子。
+
+```csharp
+public Name { get; set; }
+```
+
+> **避免** `get` 存取子擲回例外狀況。
+
+> **禁止** 只提供 `set` 存取子，或 `set` 存取子比 `get` 存取子有更大的存取範圍。
+
+```csharp
+public Name { set; }  // 錯誤
+public Age { protected get; set; }  // 錯誤
+```
+
 
 
