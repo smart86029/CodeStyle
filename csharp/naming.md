@@ -322,6 +322,14 @@ public GetMainDish()  // 應修正 MainDish 名稱或修正 GetMainDish 名稱
 }
 ```
 
+##### 索引子
+
+> **堅持** 使用 Item 做為名稱，除非有明顯更好的名稱。
+
+```csharp
+public int this[int index] { get; }  // 預設名稱即為 Item
+```
+
 ##### 方法
 
 > **堅持** 使用動詞或動詞片語。

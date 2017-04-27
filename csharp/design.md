@@ -193,5 +193,9 @@ public Name { set; }  // 錯誤
 public Age { protected get; set; }  // 錯誤
 ```
 
+#### 索引子 \(Indexer\)
+
+
+
 
 
