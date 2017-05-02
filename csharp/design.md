@@ -195,6 +195,17 @@ public Age { protected get; set; }  // 錯誤
 
 #### 索引子 \(Indexer\)
 
+> **考慮** 提供索引子，若型別表示項目的集合。
+
+```csharp
+public class MyCollection<T>
+{
+    // 宣告索引子
+}
+```
+
+> **避免** 使用多個參數的索引子。
+
 
 
 
