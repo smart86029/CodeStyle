@@ -206,7 +206,11 @@ public class MyCollection<T>
 
 > **避免** 使用多個參數的索引子。
 
+#### 方法 \(Methods\)
 
+> **考慮** 使用 `params` 關鍵字，若有不定數目參數。
+>
+> **避免** 使用 `out` 或 `ref` 參數。
 
 
 
