@@ -340,6 +340,14 @@ public void SaveChanges()
 }
 ```
 
+> ##### 堅持 使用 Async 做為後置詞，若為 `async` 的非同步方法。
+
+```csharp
+public async Task SaveAsync()
+{
+}
+```
+
 ##### 欄位
 
 > **堅持** 使用名詞、名詞片語或形容詞。
