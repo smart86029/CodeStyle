@@ -212,5 +212,7 @@ public class MyCollection<T>
 >
 > **避免** 使用 `out` 或 `ref` 參數。
 
+> **禁止** 多載擴充方法。
+
 
 
