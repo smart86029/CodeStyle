@@ -212,13 +212,18 @@ public class MyCollection<T>
 
 #### 欄位 \(Field\)
 
+> **堅持** 宣告欄位為 `private`，除了常數和靜態唯讀欄位。
+
+```csharp
+public const int MaxLength = 10;
+private string name;
+```
+
 #### 參數 \(Parameter\)
 
 > **考慮** 使用 `params` 關鍵字，若有不定數目參數。
-
+>
 > **避免** 使用 `out` 或 `ref` 參數。
-
-
 
 
 
