@@ -1,3 +1,4 @@
-# My Awesome Book
+# 程式碼風格
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+紀錄個人撰寫風格，統一產出的程式碼。
+
