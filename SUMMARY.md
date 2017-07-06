@@ -6,4 +6,6 @@
   * [格式方針](csharp/formatting.md)
   * [註解方針](csharp/comments.md)
   * [設計方針](csharp/design.md)
+* [HTML](chapter.md)
+  * [格式方針](html/formatting.md)
 
