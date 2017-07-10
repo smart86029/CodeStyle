@@ -30,7 +30,7 @@
 </div>
 ```
 
-#### 空格 \(Spacing\) {#空格-spacing}
+#### 空格 \(Spacing\)
 
 > **堅持 **Tab 設為 2 spaces。
 
@@ -60,8 +60,36 @@
 > **堅持** 使用自閉標籤。
 
 ```html
+<!DOCTYPE html>  <!-- 例外 -->
+
 <br />
 <input type="hidden" value="1" />
+```
+
+> **堅持** 使用雙引號 `""` 框住屬性值。
+
+```html
+<a href="#"></a>
+```
+
+> **堅持** 使用小寫宣告標籤。
+
+```html
+<!DOCTYPE html>  <!-- 例外 -->
+
+<A HREF="#"></A>  <!-- 錯誤 -->
+```
+
+> **堅持** 布林屬性省略屬性值。
+
+```html
+<input type="text" disabled />
+```
+
+> **堅持** 自定義屬性使用 `data-` 前綴詞。
+
+```html
+<input type="text" data-color="red" />
 ```
 
 ###### 參考 {#參考}
