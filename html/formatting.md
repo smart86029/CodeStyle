@@ -48,9 +48,21 @@
 <a href="#about">關於</a>
 ```
 
-######  {#參考}
+#### 可維護性 \(Maintainability\) {#可維護性-maintainability}
 
-######  {#參考}
+> **堅持** 關閉所有標籤。
+
+```html
+<p>Do not
+<p>Do</p>
+```
+
+> **堅持** 使用自閉標籤。
+
+```html
+<br />
+<input type="hidden" value="1" />
+```
 
 ###### 參考 {#參考}
 
