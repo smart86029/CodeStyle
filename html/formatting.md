@@ -48,6 +48,17 @@
 <a href="#about">關於</a>
 ```
 
+#### 排序 \(Ordering\) {#排序-ordering}
+
+> **考慮** 以下列順序組織屬性。
+
+* `type`、`for`、`href`、`src`
+* `class`
+* `id`
+* `name`
+* `value`
+* `title`、`alt`
+
 #### 可維護性 \(Maintainability\) {#可維護性-maintainability}
 
 > **堅持** 關閉所有標籤。
