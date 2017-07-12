@@ -7,8 +7,6 @@
   * [註解方針](csharp/comments.md)
   * [設計方針](csharp/design.md)
 * [HTML](chapter.md)
-  * [naming](/html/naming.md)
+  * [命名方針](/html/naming.md)
   * [格式方針](html/formatting.md)
-
-
 
