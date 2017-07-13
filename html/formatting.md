@@ -56,7 +56,7 @@
 * `class`
 * `id`
 * `name`
-* `value`
+* `value`、`content`
 * `title`、`alt`、`rel`
 * `checked`、`selected` 等其餘項目
 
@@ -69,13 +69,11 @@
 <p>Do</p>
 ```
 
-> **堅持** 使用自閉標籤。
+> **堅持** 自閉標籤省略結束標記。
 
 ```html
-<!DOCTYPE html>  <!-- 例外 -->
-
-<br />
-<input type="hidden" value="1" />
+<br>
+<input type="hidden" value="1">
 ```
 
 > **堅持** 使用雙引號 `""` 框住屬性值。
