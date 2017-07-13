@@ -57,7 +57,7 @@
 * `id`
 * `name`
 * `value`
-* `title`、`alt`
+* `title`、`alt`、`rel`
 * `checked`、`selected` 等其餘項目
 
 #### 可維護性 \(Maintainability\) {#可維護性-maintainability}
