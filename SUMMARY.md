@@ -9,4 +9,5 @@
 * [HTML](chapter.md)
   * [命名方針](/html/naming.md)
   * [格式方針](html/formatting.md)
+  * [設計方針](html/design.md)
 
