@@ -60,5 +60,31 @@
 </body>
 ```
 
+#### 表單
+
+> **堅持** 將 `<label>` 標籤與 `<input>` 標籤關聯。
+
+```html
+<label for="password">密碼</label>
+<input type="password" id="password">
+<label>
+  <input type="checkbox"> 記住我
+</label>
+```
+
+> **堅持** 在 `<button>` 標籤宣告 `type` 屬性。
+
+```html
+<button type="submit">送出</button>
+<button type="button">取消</button>
+```
+
+> **避免** 在 `<button>` 標籤使用 name 屬性。
+
+```html
+<!-- 不建議使用 -->
+<button type="button" name="button-test">測試</button>
+```
+
 
 
