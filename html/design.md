@@ -14,10 +14,28 @@
 <meta charset="UTF-8">
 ```
 
+> **堅持** 使用 &lt;title&gt; 標籤宣告標題。
+
+```html
+<title>測試網站</title>
+```
+
+> **堅持** 確保根目錄 favicon.ico 存在，或指定 icon 的地址。
+
+```html
+<link href="/source/other/favicon.ico" rel="shortcut icon" >
+```
+
 > **考慮** 宣告 IE 相容模式。
 
 ```html
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+```
+
+> **考慮** 宣告裝置大小，以支持行動裝置。
+
+```html
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
 ```
 
 > **考慮** 在 `<html>` 標籤宣告 `lang` 屬性。
