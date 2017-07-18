@@ -67,6 +67,7 @@
 ```html
 <label for="password">密碼</label>
 <input type="password" id="password">
+
 <label>
   <input type="checkbox"> 記住我
 </label>
@@ -79,11 +80,26 @@
 <button type="button">取消</button>
 ```
 
-> **避免** 在 `<button>` 標籤使用 name 屬性。
+> **避免** 在 `<button>` 標籤宣告 `name` 屬性。
 
 ```html
 <!-- 不建議使用 -->
 <button type="button" name="button-test">測試</button>
+```
+
+#### 圖片
+
+> **堅持** 宣告 `alt` 屬性，提高載入失敗後的使用者體驗。
+
+```html
+<img src="/images/avatar.jpg" alt="大頭貼">
+```
+
+> **禁止** 宣告 `src` 屬性為空，避免部分瀏覽器重新載入頁面。
+
+```html
+<!-- 錯誤 -->
+<img src="">
 ```
 
 
