@@ -93,13 +93,13 @@
 > **堅持** 布林屬性省略屬性值。
 
 ```html
-<input type="text" disabled />
+<input type="text" disabled>
 ```
 
 > **堅持** 自定義屬性使用 `data-` 前綴詞。
 
 ```html
-<input type="text" data-color="red" />
+<input type="text" data-color="red">
 ```
 
 ###### 參考 {#參考}
