@@ -42,7 +42,8 @@ var userName = "Admin";
 ```csharp
 public class DBUtility
 {
-    public int ContextId { get; set; }  // 例外，identification 的縮寫，非縮略字
+    // 例外，identification 的縮寫，非縮略字
+    public int ContextId { get; set; }
 
     public void ExecuteSql(string sql)
     {
@@ -69,25 +70,31 @@ public class DBUtility
 > **堅持** 使用有意義的名稱。
 
 ```csharp
-for (var i = 0; i < 5; i++)  // 例外，迴圈變數 i
+// 例外，迴圈變數 i
+for (var i = 0; i < 5; i++)
     result += i;
 
-Customers.Find(c => c.Name == "Anne");  // 例外，匿名函式的輸入參數 c
+// 例外，匿名函式的輸入參數 c
+Customers.Find(c => c.Name == "Anne");
 ```
 
 > **堅持** 可讀性優先於簡潔性。
 
 ```csharp
-public bool CanScrollHorizontally { get; set; }  // 較優
+// 較優
+public bool CanScrollHorizontally { get; set; }
+
 public bool ScrollableX { get; set; }
 ```
 
 > **堅持** 使用正確的拼寫以及慣用詞彙。參考 [CA1726](https://msdn.microsoft.com/zh-tw/library/ms182258.aspx)。
 
 ```csharp
-public bool IsWriteable { get; set; }  // 應修正為 IsWritable
+// 應修正為 IsWritable
+public bool IsWriteable { get; set; }
 
-public void SignOn(string account, string password)  // 應修正為 SignIn
+// 應修正為 SignIn
+public void SignOn(string account, string password)
 {
 }
 ```
@@ -96,14 +103,18 @@ public void SignOn(string account, string password)  // 應修正為 SignIn
 
 ```csharp
 var car = new Car();
-var carList = new List<Car>();  // 應修正為 cars
+
+// 應修正為 cars
+var carList = new List<Car>();  
 ```
 
 > **堅持** 使用正確的相對詞。
 
 ```csharp
 public DateTime OpenTime { get; set; }
-public DateTime StopTime { get; set; }  // 應修正為 CloseTime
+
+// 應修正為 CloseTime
+public DateTime StopTime { get; set; }
 ```
 
 > **堅持** 使用相同的詞彙表達一樣的概念。
@@ -113,7 +124,8 @@ public Book GetBook(int id)
 {
 }
 
-public Magazine RetrieveMagazine(int id)  // 應修正為 GetMagazine
+// 應修正為 GetMagazine
+public Magazine RetrieveMagazine(int id)
 {
 }
 ```
@@ -121,7 +133,8 @@ public Magazine RetrieveMagazine(int id)  // 應修正為 GetMagazine
 > **避免** 使用縮寫或不常用的縮略字。
 
 ```csharp
-public void QryData()  // 應修正為 QueryData
+// 應修正為 QueryData
+public void QryData()
 {
 }
 ```
@@ -129,8 +142,9 @@ public void QryData()  // 應修正為 QueryData
 > **禁止** 使用底線、 連字號或任何其他非英數字元。
 
 ```csharp
+// 例外，單元測試的方法
 [TestMethod]
-public void GetName_ReturnName_WhenUserIsNotNull()  // 例外，單元測試的方法
+public void GetName_ReturnName_WhenUserIsNotNull()
 {
 }
 ```
@@ -152,7 +166,8 @@ public class UserService : Service
 > **禁止** 使用 Base 做為基底類別的後置詞。
 
 ```csharp
-public abstract class ServiceBase  // 應修正為 Service
+// 應修正為 Service
+public abstract class ServiceBase
 {
 }
 ```
@@ -160,7 +175,8 @@ public abstract class ServiceBase  // 應修正為 Service
 > **禁止** 使用前置詞。
 
 ```csharp
-public class CUser  // 應修正為 User
+// 應修正為 User
+public class CUser
 {
 }
 ```
@@ -315,9 +331,12 @@ public enum SideDishes
 
 ```csharp
 public MainDish MainDish { get; set; }
-public bool HasNotDessert { get; set; }  // 應修正為 HasDessert
 
-public GetMainDish()  // 應修正 MainDish 名稱或修正 GetMainDish 名稱
+// 應修正為 HasDessert
+public bool HasNotDessert { get; set; }
+
+// 應修正 MainDish 名稱或修正 GetMainDish 名稱
+public GetMainDish()
 {
 }
 ```
@@ -327,7 +346,8 @@ public GetMainDish()  // 應修正 MainDish 名稱或修正 GetMainDish 名稱
 > **堅持** 使用 Item 做為名稱，除非有明顯更好的名稱。
 
 ```csharp
-public int this[int index] { get; }  // 預設名稱即為 Item
+// 預設名稱即為 Item
+public int this[int index] { get; }
 ```
 
 ##### 方法
@@ -357,7 +377,8 @@ public async Task SaveAsync()
 ```csharp
 public class Address
 {
-    private string _postCode;  // 應修正為 postCode
+    // 應修正為 postCode
+    private string _postCode;
 }
 ```
 
