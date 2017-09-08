@@ -227,12 +227,42 @@ private string name;
 
 #### 例外 \(Exception\)
 
-> **堅持** 擲回例外，而非回傳錯誤碼。
+> **堅持** 攔截例外要有相應的處理。
 
+```csharp
+// 禁止
+catch (ArgumentException e)
+{
+}
+```
+
+> **堅持** 擲回例外，而非回傳錯誤碼。
+>
 > **堅持** 除了系統錯誤，應盡可能使用一般流程控制而不使用例外，讓使用者可以撰寫不會擲回例外的方法。
 
 ```csharp
+// Tester-Doer 模式，避免擲回 InvalidOperationException
+var scores = new List<int>();
+if (scores.Count > 0)
+    Console.WriteLine(scores.Max());
+```
 
+> **考慮** 擲回例外可能會降低效能。
+
+```csharp
+// Try-Parse 模式，避免擲回 ArgumentNullException、FormatException、ArgumentException
+public struct DateTime
+{
+    public static DateTime Parse(string dateTime)
+    { 
+        // ... 
+    }
+
+    public static bool TryParse(string dateTime, out DateTime result)
+    {
+        // ...
+    }
+}
 ```
 
 
