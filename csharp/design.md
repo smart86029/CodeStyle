@@ -292,6 +292,7 @@ public void Execute()
     throw NewCustomException();
 }
 
+// 統一呼叫此方法以建立相同的例外狀況
 private CustomException NewCustomException()
 {
     return new CustomException("Error")
