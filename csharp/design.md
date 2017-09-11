@@ -225,20 +225,22 @@ private string name;
 >
 > **避免** 使用 `out` 或 `ref` 參數。
 
-#### 例外 \(Exception\)
+#### 例外狀況 \(Exception\)
 
-> **堅持** 攔截例外要有相應的處理。
+> **堅持** 攔截例外狀況要有相應的處理。
 
 ```csharp
 // 禁止
-catch (ArgumentException e)
+catch (ArgumentException ex)
 {
 }
 ```
 
-> **堅持** 擲回例外，而非回傳錯誤碼。
+> **堅持** 擲回例外狀況，而非回傳錯誤碼。
 >
-> **堅持** 除了系統錯誤，應盡可能使用一般流程控制而不使用例外，讓使用者可以撰寫不會擲回例外的方法。
+> **堅持** 盡量使用標準的例外狀況類型。
+
+> **堅持** 除了系統錯誤，應盡可能使用一般流程控制而不使用例外狀況，讓使用者可以撰寫不會擲回例外狀況的方法。
 
 ```csharp
 // Tester-Doer 模式，避免擲回 InvalidOperationException
@@ -247,7 +249,7 @@ if (scores.Count > 0)
     Console.WriteLine(scores.Max());
 ```
 
-> **考慮** 擲回例外可能會降低效能。
+> **考慮** 擲回例外狀況可能會降低效能。
 
 ```csharp
 // Try-Parse 模式，避免擲回 ArgumentNullException、FormatException、ArgumentException
@@ -262,6 +264,22 @@ public struct DateTime
     {
         // ...
     }
+}
+```
+
+> **考慮** 重新擲回例外時保留原有的堆疊追蹤。
+
+```csharp
+// 建議
+catch (ArgumentException ex)
+{
+    throw;
+}
+
+// 若無特別考量，不建議使用
+catch (ArgumentException ex)
+{
+    throw ex;
 }
 ```
 
