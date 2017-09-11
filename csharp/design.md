@@ -239,7 +239,7 @@ catch (ArgumentException ex)
 > **堅持** 擲回例外狀況，而非回傳錯誤碼。
 >
 > **堅持** 盡量使用標準的例外狀況類型。
-
+>
 > **堅持** 除了系統錯誤，應盡可能使用一般流程控制而不使用例外狀況，讓使用者可以撰寫不會擲回例外狀況的方法。
 
 ```csharp
@@ -280,6 +280,21 @@ catch (ArgumentException ex)
 catch (ArgumentException ex)
 {
     throw ex;
+}
+```
+
+> **考慮** 使用例外狀況產生器方法，用來建立相同的例外狀況。
+
+```csharp
+public void Execute()
+{
+    // ...
+    throw NewCustomException();
+}
+
+private CustomException NewCustomException()
+{
+    return new CustomException("Error")
 }
 ```
 
