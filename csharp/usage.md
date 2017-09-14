@@ -74,5 +74,20 @@ private CustomException NewCustomException()
 }
 ```
 
+#### 集合 \(Collections\)
+
+> **堅持** 盡量使用集合而非陣列。
+
+> **堅持** 使用位元組陣列。
+
+```csharp
+void ToInt32(byte[] value, int startIndex)
+
+// 錯誤
+void ToInt32(ICollection<byte> value, int startIndex)
+```
+
+
+
 
 
