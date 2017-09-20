@@ -77,7 +77,7 @@ private CustomException NewCustomException()
 #### 集合 \(Collections\)
 
 > **堅持** 盡量使用集合而非陣列。
-
+>
 > **堅持** 使用位元組陣列。
 
 ```csharp
@@ -87,7 +87,12 @@ void ToInt32(byte[] value, int startIndex)
 void ToInt32(ICollection<byte> value, int startIndex)
 ```
 
+> **堅持** 傳回空集合，而非 `null`。
 
+```csharp
+if (dataTable.Rows == 0)
+    return new List<int>();
+```
 
 
 
