@@ -14,7 +14,7 @@
 <meta charset="UTF-8">
 ```
 
-> **堅持** 使用 &lt;title&gt; 標籤宣告標題。
+> **堅持** 使用 `<title>` 標籤宣告標題。
 
 ```html
 <title>測試網站</title>
@@ -44,7 +44,7 @@
 <html lang="zh-TW">
 ```
 
-> **考慮** 在 &lt;head&gt; 引入所有需要的 `CSS` 樣式表，無須宣告 `type="text/css"`，但必須宣告 `rel="stylesheet"`。
+> **考慮** 在 `<head>` 引入所有需要的 `CSS` 樣式表，無須宣告 `type="text/css"`，但必須宣告 `rel="stylesheet"`。
 
 ```html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
