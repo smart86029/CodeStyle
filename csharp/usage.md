@@ -94,5 +94,9 @@ if (dataTable.Rows == 0)
     return new List<int>();
 ```
 
+參考
+
+* [用法方針](https://msdn.microsoft.com/zh-tw/library/ms229035%28v=vs.110%29.aspx)
+
 
 

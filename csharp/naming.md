@@ -105,7 +105,7 @@ public void SignOn(string account, string password)
 var car = new Car();
 
 // 應修正為 cars
-var carList = new List<Car>();  
+var carList = new List<Car>();
 ```
 
 > **堅持** 使用正確的相對詞。
