@@ -94,6 +94,18 @@ if (dataTable.Rows == 0)
     return new List<int>();
 ```
 
+#### 參數 \(Parameter\)
+
+> **堅持** 移除不使用的參數。
+
+```csharp
+// 移除 name
+public void GetSum(decimal amount, int count, string name)
+{
+    return amount * count;
+}
+```
+
 參考
 
 * [用法方針](https://msdn.microsoft.com/zh-tw/library/ms229035%28v=vs.110%29.aspx)
