@@ -100,7 +100,7 @@ if (dataTable.Rows == 0)
 
 ```csharp
 // 移除 name
-public void GetSum(decimal amount, int count, string name)
+public decimal GetSum(decimal amount, int count, string name)
 {
     return amount * count;
 }
@@ -110,12 +110,12 @@ public void GetSum(decimal amount, int count, string name)
 
 ```csharp
 // 使用多載
-public void GetSum(decimal amount, int count)
+public decimal GetSum(decimal amount, int count)
 {
     // 沒有折扣的邏輯
 }
 
-public void GetSum(decimal amount, int count, decimal discount)
+public decimal GetSum(decimal amount, int count, decimal discount)
 {
     // 有折扣的邏輯
 }
