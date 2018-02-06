@@ -106,6 +106,21 @@ public void GetSum(decimal amount, int count, string name)
 }
 ```
 
+> **避免** 使用選擇性引數 \(optional arguments\)。
+
+```csharp
+// 使用多載
+public void GetSum(decimal amount, int count)
+{
+    // 沒有折扣的邏輯
+}
+
+public void GetSum(decimal amount, int count, decimal discount)
+{
+    // 有折扣的邏輯
+}
+```
+
 參考
 
 * [用法方針](https://msdn.microsoft.com/zh-tw/library/ms229035%28v=vs.110%29.aspx)
