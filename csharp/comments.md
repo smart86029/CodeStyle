@@ -105,16 +105,6 @@ public enum Sex
 }
 ```
 
-> **堅持** 屬性的值必須添加文件註解。
-
-```csharp
-/// <summary>
-/// 取得或設定使用者名稱。
-/// </summary>
-/// <value>使用者名稱。</value>
-public string UserName { get; set; }
-```
-
 > **考慮** 使用其他的標記添加文件註解。參考 [MSDN](https://msdn.microsoft.com/zh-tw/library/5ast78ax.aspx)。
 
 
